@@ -8,13 +8,13 @@ metadata:
     ngninx.ingress.kubernetes.io/proxy-send-timeout: "600"
 spec:
   rules:
-  - host: mp3converter.com
-    http:
-      paths:
-      - pathType: Prefix
-        path: "/"
-        backend:
-          service:
-            name: gateway
-            port: 
-              number: 8080
+    - host: mp3converter.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: gateway
+                port: 
+                  number: 8080
